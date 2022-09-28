@@ -1,0 +1,46 @@
+/*header*/
+header {
+	width: 100%;
+	background-color: #e0ebeb;
+}
+h1 {
+	margin: 0, auto;
+	width: 100%;
+	text-align: center;
+	font-size: 80px;
+	font-family: 'Amatic SC', cursive;
+	color:#0f922c;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+h2 {
+	margin: 0, auto;
+	margin-top: -25px;
+	width: 100%;
+	text-align: center;
+	font-size: 35px;
+	/*font-family: 'Homemade Apple', cursive;*/
+	font-family: 'Marck Script', cursive;	
+	color:salmon;
+}
+/*---------------------------*/
+
+
+/*body*/
+body {
+	background: linear-gradient(#b3cccc, #334d4d);
+	/*background-color: #b3cccc;*/
+}
+main {
+	background-color: #94b8b8;
+	height: 900px;
+	margin-left: 25%;
+	margin-right: 25%
+
+}
+img {
+	display: block;
+	margin: 0 auto;
+}
+/*---------------------------*/
+

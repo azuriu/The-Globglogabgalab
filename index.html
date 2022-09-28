@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>For the Love of Books
+		<img src="glob_pixel copy.png">
+	</title>
+	<script>
+
+var questions = new Array();
+questions[0] = 'Is there a difference between a jungle and a rain forest?'
+questions[1] = 'What is the world\'s most common religion?',
+questions[2] = 'What is the second largest country (in size) in the world?';
+
+var choices = new Array();
+choices[0] = ['No difference', 'Some difference', 'Completely different'],
+choices[1] = ['Christianity', 'Buddhism', 'Hinduism', 'Islam'],
+choices[2] = ['USA', 'China', 'Canada', 'Russia'];
+
+var answers = new Array();
+answers[0] = ['Some difference'],
+answers[1] = ['Christianity'],
+answers[2] = ['Canada'];
+
+var score = 0;
+i= 0;
+
+var listQuestion = function(){  
+    if( i < questions.length ){
+        document.getElementById("myDiv1").innerHTML = '<p>'+questions[i]+'</p>';
+        for (k=0; k<choices[i].length; k++){
+            document.getElementById("myDiv2").innerHTML ='<p><input type = "radio" name = "questionchoice">'+choices[i][k]+'</p>';
+        }
+        document.getElementById("myDiv3").innerHTML = '<p><button onClick = "getRadioValue()">Check</button></p> <br>';
+    };
+};
+
+var getRadioValue = function(){
+    for ( var h = 0; h < document.getElementsByName('questionchoice').length; h++ ){
+        var value = '';
+        if (document.getElementsByName('questionchoice')[h].checked==true){
+            value = document.getElementsByName('questionchoice')[h].value;
+            score+=1
+        }
+    }
+    if (value== answers[i]){
+        document.getElementById("myDiv4").innerHTML ="That is correct. </br><button input type = 'submit' onClick = 'loadContent()'> Next Question</button>";   
+    }
+    else {
+        document.getElementById("myDiv4").innerHTML ="That is incorrect. </br><button input type = 'submit' onClick = 'loadContent()'> Next Question</button>"; 
+    }
+    i++;
+};
+
+var whatIsScore = function(){
+    return score; 
+}
+
+window.onload = listQuestion();
+
+</script>
+	<meta name="viewport" content="width=devide-width initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Homemade+Apple|Marck+Script" rel="stylesheet">
+ 
+</head>
+<body>
+	<header>
+		<h1>The Globglogabgalab</h1>
+		<h2>Splendid. Simply delicious</h2>
+	</header>
+	<main>
+		<img src="glob_pixel copy.png">
+		<div class="app">
+
+				<div id="myDiv1"></div> 
+				<div id="myDiv2"></div>
+				<div id="myDiv3"></div>
+				<div id="myDiv4"></div>
+		</div>
+		
+	</main>
+</body>
+</html>
